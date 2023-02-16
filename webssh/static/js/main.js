@@ -125,6 +125,22 @@ jQuery(function($){
     return null;
   }
 
+  const entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+  };
+  
+  function escapeHtml (string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+      return entityMap[s];
+    });
+  }
 
   function parse_url_data(string, form_keys, opts_keys, form_map, opts_map) {
     var i, pair, key, val,
@@ -136,9 +152,9 @@ jQuery(function($){
       val = pair.slice(1).join('=').trim();
 
       if (form_keys.indexOf(key) >= 0) {
-        form_map[key] = val;
+        form_map[key] = escapeHtml(val);
       } else if (opts_keys.indexOf(key) >=0) {
-        opts_map[key] = val;
+        opts_map[key] = escapeHtml(val);
       }
     }
 
