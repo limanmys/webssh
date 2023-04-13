@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@master
-    - name: Make DEB package
+    - name: Make DEB&RPM package
       run: |
         sudo apt install rpm -y
         TMP_DIR=/tmp/liman-ssh-build

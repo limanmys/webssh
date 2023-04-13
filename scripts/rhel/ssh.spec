@@ -87,6 +87,5 @@ systemctl restart liman-novnc 2>/dev/null
 
 %files
 /liman/webssh/*
-/liman/keys/vnc/*
 
 %define _unpackaged_files_terminate_build 0
