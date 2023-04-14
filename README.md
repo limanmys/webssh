@@ -1,7 +1,7 @@
 ## WebSSH
 
-[![Build Status](https://travis-ci.org/huashengdun/webssh.svg?branch=master)](https://travis-ci.org/huashengdun/webssh)
-[![codecov](https://codecov.io/gh/huashengdun/webssh/branch/master/graph/badge.svg)](https://codecov.io/gh/huashengdun/webssh)
+[![python](https://github.com/huashengdun/webssh/actions/workflows/python.yml/badge.svg)](https://github.com/huashengdun/webssh/actions/workflows/python.yml)
+[![codecov](https://raw.githubusercontent.com/huashengdun/webssh/coverage-badge/coverage.svg)](https://raw.githubusercontent.com/huashengdun/webssh/coverage-badge/coverage.svg)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/webssh.svg)
 ![PyPI](https://img.shields.io/pypi/v/webssh.svg)
 
@@ -37,7 +37,7 @@ A simple web application to be used as an ssh client to connect to your ssh serv
 
 ### Requirements
 
-* Python 2.7/3.4+
+* Python 3.8+
 
 
 ### Quickstart
