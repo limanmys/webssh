@@ -45,11 +45,13 @@ Type=simple
 Restart=always
 RestartSec=1
 User=liman
-ExecStart=/usr/bin/python3 /liman/webssh/run.py
+ExecStart=/usr/bin/python3 /liman/webssh/run.py --address='127.0.0.1' --port=8888
 [Install]
 WantedBy=multi-user.target
     """ > /etc/systemd/system/liman-ssh.service
 fi
+
+touch /usr/share/novnc/index.html 2>/dev/null
 
 # Create Systemd Service
 if [ -f "/etc/systemd/system/liman-novnc.service" ]; then
